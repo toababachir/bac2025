@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نتائج البكالوريا</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: linear-gradient(to bottom, #004d00, #001a33);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .form-box, .result-box {
+      background: #fff;
+      color: black;
+      padding: 25px;
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: green;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkgreen;
+    }
+
+    .result-box {
+      display: none;
+      text-align: right;
+    }
+
+    .note {
+      background: #fffae6;
+      border-right: 4px solid #f0ad4e;
+      padding: 10px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .success {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box" id="formBox">
+    <h2>نتائج شهادة البكالوريا 2024 الجزائر</h2>
+    <input type="text" id="regNum" placeholder="رقم التسجيل">
+    <input type="text" id="secretNum" placeholder="الرقم السري">
+    <button onclick="checkResult()">استظهار النتيجة</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <div class="result-box" id="resultBox">
+    <h2>ألف مبروك</h2>
+    <p><strong>رقم التسجيل:</strong> 123456</p>
+    <p><strong>الشعبة:</strong> العلوم التجريبية</p>
+    <p><strong>اللقب:</strong> س</p>
+    <p><strong>الاسم:</strong> ي</p>
+    <p><strong>تاريخ الميلاد:</strong> 14/06/2004</p>
+    <p><strong>مكان الميلاد:</strong> س</p>
+    <p><strong>المعدل:</strong> 16.22</p>
+    <p><strong>الملاحظة:</strong> بتقدير جيد جداً</p>
+
+    <div class="note">
+      ⚠️ هام جداً: كشف النقاط<br>
+      على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.
+    </div>
+    <div class="success">نتمنى التوفيق للجميع</div>
+  </div>
+
+  <script>
+    function checkResult() {
+      const reg = document.getElementById("regNum").value.trim();
+      const secret = document.getElementById("secretNum").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+
+      // عدّل هذه القيم لتحديد المعلومات الصحيحة
+      const correctReg = "123456";
+      const correctSecret = "7890";
+
+      if (reg === correctReg && secret === correctSecret) {
+        document.getElementById("formBox").style.display = "none";
+        document.getElementById("resultBox").style.display = "block";
+      } else {
+        errorMsg.textContent = "رقم التسجيل أو الرقم السري غير صحيح!";
+      }
+    }
+  </script>
+
+</body>
+</html>
