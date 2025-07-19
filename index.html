@@ -186,23 +186,67 @@
     </div>
   </div>
 
-  <script>
-    function checkResult() {
-      const reg = document.getElementById("regNum").value.trim();
-      const secret = document.getElementById("secretNum").value.trim();
-      const errorMsg = document.getElementById("errorMsg");
-
-      const correctReg = "123456";
-      const correctSecret = "7890";
-
-      if (reg === correctReg && secret === correctSecret) {
-        document.getElementById("formBox").style.display = "none";
-        document.getElementById("resultBox").style.display = "block";
-      } else {
-        errorMsg.textContent = "رقم التسجيل أو الرقم السري غير صحيح!";
-      }
+<script>
+  const students = [
+    {
+      reg: "123456",
+      secret: "7890",
+      name: "جواد عبد الكريم",
+      surname: "بن عمر",
+      dob: "17/10/2002",
+      birthPlace: "البليدة",
+      field: "العلوم التجريبية",
+      avg: "14.26",
+      note: "بتقدير جيد جداً"
+    },
+    {
+      reg: "654321",
+      secret: "1234",
+      name: " صحراوي",
+      surname: "طيب",
+      dob: "10/05/2003",
+      birthPlace: " الجلفاوي",
+      field: "علوم تجريبية",
+      avg: "تدي لقلاوي",
+      note: "نكمك"
     }
-  </script>
+    // يمكنك إضافة المزيد هنا بنفس الشكل
+  ];
+
+  function checkResult() {
+    const reg = document.getElementById("regNum").value.trim();
+    const secret = document.getElementById("secretNum").value.trim();
+    const errorMsg = document.getElementById("errorMsg");
+
+    const student = students.find(s => s.reg === reg && s.secret === secret);
+
+    if (student) {
+      document.getElementById("formBox").style.display = "none";
+      document.getElementById("resultBox").style.display = "block";
+
+      document.getElementById("resultBox").innerHTML = `
+        <h2>ألف مبروك</h2>
+        <p><strong>رقم التسجيل:</strong> ${student.reg}</p>
+        <p><strong>الشعبة:</strong> ${student.field}</p>
+        <p><strong>اللقب:</strong> ${student.surname}</p>
+        <p><strong>الاسم:</strong> ${student.name}</p>
+        <p><strong>تاريخ الميلاد:</strong> ${student.dob}</p>
+        <p><strong>مكان الميلاد:</strong> ${student.birthPlace}</p>
+        <p><strong>المعدل:</strong> ${student.avg}</p>
+        <p><strong>الملاحظة:</strong> ${student.note}</p>
+
+        <div class="note">
+          ⚠️ هام جداً: كشف النقاط<br>
+          على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.
+        </div>
+        <div class="success">نتمنى التوفيق للجميع</div>
+      `;
+    } else {
+      errorMsg.textContent = "رقم التسجيل أو الرقم السري غير صحيح!";
+    }
+  }
+</script>
+
 
 </body>
 </html>
