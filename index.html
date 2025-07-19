@@ -3,19 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>نتائج البكالوريا</title>
   
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
-          font-family: 'Cairo', Arial, sans-serif;
-  direction: rtl;
-
+      font-family: 'Cairo', Arial, sans-serif;
+      direction: rtl;
       background-image: url('images/Screenshot (357).png');
       background-size: cover;
       background-position: center;
@@ -34,20 +29,23 @@
       padding: 20px;
     }
 
- .row-content {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* المسافة بين الصورة والنص */
-  direction: rtl; /* لأن النص عربي */
-}
-.row-content img {
-  height: 40px;
-  width: auto;
-}
-.row-content h1 {
-  font-size: 20px;
-  margin: 0;
-}
+    .row-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      direction: rtl;
+    }
+
+    .row-content img {
+      height: 40px;
+      width: auto;
+    }
+
+    .row-content h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
     .header-box {
       text-align: center;
       margin-bottom: 20px;
@@ -140,114 +138,84 @@
   <div class="wrapper">
 
     <!-- رأس الجمهورية -->
-<div class="header-box">
-    <div class="row-content">
+    <div class="header-box">
+      <div class="row-content">
         <img src="images/OIP (5).webp" alt="علم الجزائر">
-          <h3> الجمهورية الجزائرية الديمقراطية الشعبية</h3>
+        <h3>🇩🇿 الجمهورية الجزائرية الديمقراطية الشعبية</h3>
+      </div>
     </div>
-</div>
 
-<h1>نتائج امتحان شهادة الباكلوريا دورة 2025</h1>
+    <h1>نتائج امتحان شهادة الباكلوريا دورة 2025</h1>
 
-<p>في اليوم الأول من إعلان النتائج، يمكنك الاطلاع على النتائج المختصرة ابتداءً من يوم 2025/06/20.</p>
-
-<p><strong>الراسبون:</strong> يمكنهم سحب كشف النقاط من المؤسسة التي يدرسون بها، أما الأحرار فيتحصلون عليه من مديريات التربية التابعة لهم.</p>
-
-<p><strong>الناجحون:</strong> يمكنهم أيضًا سحب كشف النقاط من المؤسسة التي يدرسون بها، أما الأحرار فيتحصلون عليه من مديريات التربية.</p>
-
-
+    <p>في اليوم الأول من إعلان النتائج، يمكنك الاطلاع على النتائج المختصرة ابتداءً من يوم 2025/06/20.</p>
+    <p><strong>الراسبون:</strong> يمكنهم سحب كشف النقاط من المؤسسة، أما الأحرار فيتحصلون عليه من مديريات التربية.</p>
+    <p><strong>الناجحون:</strong> يمكنهم أيضًا سحب كشف النقاط من المؤسسة أو مديريات التربية.</p>
 
     <!-- نموذج الإدخال -->
     <div class="form-box" id="formBox">
-      <h2>نتائج شهادة البكالوريا 2024 الجزائر</h2>
+      <h2>نتائج شهادة البكالوريا 2025 الجزائر</h2>
       <input type="text" id="regNum" placeholder="رقم التسجيل">
       <input type="text" id="secretNum" placeholder="الرقم السري">
       <button onclick="checkResult()">استظهار النتيجة</button>
       <div class="error" id="errorMsg"></div>
     </div>
 
-    <!-- النتيجة -->
-    <div class="result-box" id="resultBox">
+    <!-- النتيجة 1 -->
+    <div class="result-box" id="resultBox1">
       <h2>ألف مبروك</h2>
       <p><strong>رقم التسجيل:</strong> 123456</p>
       <p><strong>الشعبة:</strong> العلوم التجريبية</p>
-      <p><strong>اللقب:</strong>  بن عمر  </p>
+      <p><strong>اللقب:</strong>بن عمر </p>
       <p><strong>الاسم:</strong> جواد عبد الكريم</p>
       <p><strong>تاريخ الميلاد:</strong> 17/10/2002</p>
       <p><strong>مكان الميلاد:</strong> البليدة</p>
       <p><strong>المعدل:</strong> 14.26</p>
       <p><strong>الملاحظة:</strong> بتقدير جيد جداً</p>
-
-      <div class="note">
-        ⚠️ هام جداً: كشف النقاط<br>
-        على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.
-      </div>
+      <div class="note">⚠️ هام جداً: كشف النقاط<br>على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.</div>
       <div class="success">نتمنى التوفيق للجميع</div>
     </div>
+
+    <!-- النتيجة 2 -->
+    <div class="result-box" id="resultBox2">
+      <h2>ألف مبروك</h2>
+      <p><strong>رقم التسجيل:</strong> 0123698</p>
+      <p><strong>الشعبة:</strong> العلوم التجريبية</p>
+      <p><strong>اللقب:</strong> صحراوي</p>
+      <p><strong>الاسم:</strong> طيب</p>
+      <p><strong>تاريخ الميلاد:</strong> 17/10/2004</p>
+      <p><strong>مكان الميلاد:</strong> جلفاوي</p>
+      <p><strong>المعدل:</strong> تدي زبي</p>
+      <p><strong>الملاحظة:</strong> مشي كمك تدي ززززبي</p>
+      <div class="note">⚠️ هام جداً: كشف النقاط<br>على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.</div>
+      <div class="success">نتمنى النياك للجميع</div>
+    </div>
+
   </div>
 
-<script>
-  const students = [
-    {
-      reg: "123456",
-      secret: "7890",
-      name: "جواد عبد الكريم",
-      surname: "بن عمر",
-      dob: "17/10/2002",
-      birthPlace: "البليدة",
-      field: "العلوم التجريبية",
-      avg: "14.26",
-      note: "بتقدير جيد جداً"
-    },
-    {
-      reg: "654321",
-      secret: "1234",
-      name: " صحراوي",
-      surname: "طيب",
-      dob: "10/05/2003",
-      birthPlace: " الجلفاوي",
-      field: "علوم تجريبية",
-      avg: "تدي لقلاوي",
-      note: "نكمك"
+  <script>
+    function checkResult() {
+      const reg = document.getElementById("regNum").value.trim();
+      const secret = document.getElementById("secretNum").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+
+      // إخفاء النتائج
+      document.getElementById("resultBox1").style.display = "none";
+      document.getElementById("resultBox2").style.display = "none";
+      errorMsg.textContent = "";
+
+      if (reg === "123456" && secret === "7890") {
+        document.getElementById("formBox").style.display = "none";
+        document.getElementById("resultBox1").style.display = "block";
+      } else if (reg === "0123698" && secret === "1456") {
+        document.getElementById("formBox").style.display = "none";
+        document.getElementById("resultBox2").style.display = "block";
+      } else {
+        errorMsg.textContent = "رقم التسجيل أو الرقم السري غير صحيح!";
+      }
     }
-    // يمكنك إضافة المزيد هنا بنفس الشكل
-  ];
-
-  function checkResult() {
-    const reg = document.getElementById("regNum").value.trim();
-    const secret = document.getElementById("secretNum").value.trim();
-    const errorMsg = document.getElementById("errorMsg");
-
-    const student = students.find(s => s.reg === reg && s.secret === secret);
-
-    if (student) {
-      document.getElementById("formBox").style.display = "none";
-      document.getElementById("resultBox").style.display = "block";
-
-      document.getElementById("resultBox").innerHTML = 
-        <h2>ألف مبروك</h2>
-        <p><strong>رقم التسجيل:</strong> ${student.reg}</p>
-        <p><strong>الشعبة:</strong> ${student.field}</p>
-        <p><strong>اللقب:</strong> ${student.surname}</p>
-        <p><strong>الاسم:</strong> ${student.name}</p>
-        <p><strong>تاريخ الميلاد:</strong> ${student.dob}</p>
-        <p><strong>مكان الميلاد:</strong> ${student.birthPlace}</p>
-        <p><strong>المعدل:</strong> ${student.avg}</p>
-        <p><strong>الملاحظة:</strong> ${student.note}</p>
-
-        <div class="note">
-          ⚠️ هام جداً: كشف النقاط<br>
-          على جميع المترشحين الناجحين الدخول مجدداً في هذا الموقع لاستخراج كشف النقاط.
-        </div>
-        <div class="success">نتمنى التوفيق للجميع</div>
-      ;
-    } else {
-      errorMsg.textContent = "رقم التسجيل أو الرقم السري غير صحيح!";
-    }
-  }
-</script>
-
+  </script>
 
 </body>
 </html>
+
 
